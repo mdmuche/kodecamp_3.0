@@ -19,6 +19,7 @@ const connectDb = mongoose
   });
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use("/v1/tasks", taskRoute);
 app.use("/v1/auth", authRoute);
